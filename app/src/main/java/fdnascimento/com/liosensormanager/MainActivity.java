@@ -27,17 +27,17 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 
         //initialize Accelerometer using SensorManager
-        this.mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        this.mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
 
-        // List all sensor device enable on device, only for sample.
-//        PackageManager manager = getPackageManager();
-//        SensorManager sensorMngr = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-//        List<Sensor> sensors = sensorMngr.getSensorList(Sensor.TYPE_ALL);
-//
-//        for (Sensor sensor : sensors) {
-//            Log.v("Sensor","Sensor:"+sensor.getName().toString());
-//        }
+//         List all sensor device enable on device, only for sample.
+        PackageManager manager = getPackageManager();
+        SensorManager sensorMngr = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        List<Sensor> sensors = sensorMngr.getSensorList(Sensor.TYPE_ALL);
+
+        for (Sensor sensor : sensors) {
+            Log.v("Sensor","Sensor:"+sensor.getName().toString());
+        }
     }
 
     protected void onResume() {
