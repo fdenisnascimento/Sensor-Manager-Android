@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         // initialize SensorManager
         this.mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 
+	    // Test de issue
+
         //initialize Accelerometer using SensorManager
         this.mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
