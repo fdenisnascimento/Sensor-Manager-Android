@@ -132,12 +132,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         // Verify the level of accelerometer and apply my configuration.
         if ((int)event.values[1] <= -2){
-//            this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
-            downView();
+            this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
 
         }else if ((int)event.values[1] >= 0){
-//            this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//            downView(false);
+            this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
     }
     @Override
